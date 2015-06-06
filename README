@@ -10,6 +10,10 @@ Steps for getting things set up:
 4a) git clone https://github.com/gmarik/vundle.git /HOME/.vim/bundle/vundle
 5) Open vim, ignore the warnings, and run :BundleInstall
 
+
+If you make changes: commit them, then
+git push origin master
+
 -------------------------------------------------------------
 ----------Things I have learned------------------------------
 -------------------------------------------------------------
