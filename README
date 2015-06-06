@@ -1,0 +1,44 @@
+------ALEX NUSSEY's VIM CONFIGURATION--------
+
+I am keeping my .vimrc on github so that it is easy to spin up instances just the way that I like them
+
+In order to clone this repo onto a new machine, go to where the vimrc needs to live
+$ git init
+$ git remote add origin https://github.com/nussey/vim-settings.git
+$ git pull origin master
+
+Then, edit the .vimrc file to reflect the path that the files were just cloned to
+
+Finally, clone the vundle repo into .vim/bundle/vundle relative to your current path
+
+
+FINAL SETUP
+
+User home directory
+-.vimrc
+-.gitignore
+-README (this file)
+-.vim/bundle/vundle/VUNDLE CONTENTS
+
+
+-------------------------------------------------------------
+----------Things I have learned------------------------------
+-------------------------------------------------------------
+
+Terminal tricks
+<C-a>: begining of line
+<C-e>: end of line
+<C-u>: delete everything before this
+<C-r>: search command history. Begin typing to search, hit <C-r> again to cycle through
+<C-L>: Clear the terminal
+
+Configuring git shortuts
+$ git config --global alias.co checkout
+$ git config --global alias.br branch
+$ git config --global alias.ci commit
+$ git config --global alias.st status
+
+Super useful commands
+head and tail show the begining and end of files respectively
+-Add a -f flag to follow changes
+-If we <C-L> afterwords it will clear the screen showing us just new changes without any bash prompts
