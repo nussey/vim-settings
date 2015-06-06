@@ -1,25 +1,14 @@
 ------ALEX NUSSEY's VIM CONFIGURATION--------
 
-I am keeping my .vimrc on github so that it is easy to spin up instances just the way that I like them
+I am keeping some of my dot files in the cloud so that I can pull them down when I am working remotely or on someone else's machine
 
-In order to clone this repo onto a new machine, go to where the vimrc needs to live
-$ git init
-$ git remote add origin https://github.com/nussey/vim-settings.git
-$ git pull origin master
-
-Then, edit the .vimrc file to reflect the path that the files were just cloned to
-
-Finally, clone the vundle repo into .vim/bundle/vundle relative to your current path
-
-
-FINAL SETUP
-
-User home directory
--.vimrc
--.gitignore
--README (this file)
--.vim/bundle/vundle/VUNDLE CONTENTS
-
+Steps for getting things set up:
+1) Clone this repo
+2) Modify the paths in the install script so that they point at the folder this doc is in 'vim-settings' and to your home folder
+3) Run the script, it will create symlinks, which are functionally identical
+4) Modify .vimrc so that the path reflects the path of your home directory, then clone down the vundle repo
+4a) git clone https://github.com/gmarik/vundle.git /HOME/.vim/bundle/vundle
+5) Open vim, ignore the warnings, and run :BundleInstall
 
 -------------------------------------------------------------
 ----------Things I have learned------------------------------
