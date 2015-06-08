@@ -1,7 +1,6 @@
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
-export GOPATH=$HOME/Developer/go
-export PATH=$PATH:$GOPATH/bin
+export GOPATH=$HOME/Developer/go:$HOME/FullStory/mn/projects/fullstory/go
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -51,7 +50,8 @@ plugins=(git)
 
 # User configuration
 
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/Users/Alex/bin:/usr/local/go/bin:$GOPATH/bin"
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/Users/Alex/bin:/usr/local/go/bin:$HOME/Developer/go/bin:$HOME/Fullstory/mn/projects/fullstory/go/bin"
+export PATH=$PATH:"$HOME/Developer/google-cloud-sdk/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -80,6 +80,5 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias showHidden="defaults write com.apple.finder AppleShowAllFiles YES"
-alias hideHidden="defaults write com.apple.finder AppleShowAllFiles NO"
 alias jsc="/System/Library/Frameworks/JavaScriptCore.framework/Versions/Current/Resources/jsc"
+
