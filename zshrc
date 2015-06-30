@@ -1,6 +1,12 @@
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
-export GOPATH=$HOME/Developer/go:$HOME/FullStory/mn/projects/fullstory/go
+# export GOPATH="$HOME/Developer/go"
+export GOPATH="$HOME/FullStory/mn/projects/fullstory/go"
+export EDITOR=vim
+
+#Make it so that the numberpad enter key works in iTerm with Z Shell
+bindkey -s "^[OM" "^M"
+bindkey "${terminfo[kent]}" accept-line
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -52,6 +58,7 @@ plugins=(git)
 
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/Users/Alex/bin:/usr/local/go/bin:$HOME/Developer/go/bin:$HOME/Fullstory/mn/projects/fullstory/go/bin"
 export PATH=$PATH:"$HOME/Developer/google-cloud-sdk/bin"
+export PATH=$PATH:"$HOME/Developer/arcanist/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -81,4 +88,5 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias jsc="/System/Library/Frameworks/JavaScriptCore.framework/Versions/Current/Resources/jsc"
-
+alias fsdir="~/Fullstory/mn/projects/fullstory"
+alias gocode="~/Fullstory/mn/projects/fullstory/go/src/fs"

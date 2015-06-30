@@ -29,6 +29,10 @@ Terminal tricks
 <C-r>: search command history. Begin typing to search, hit <C-r> again to cycle through
 <C-L>: Clear the terminal
 
+Vim
+<C-n> to autocomplete
+<C-w>T move window into a new tab
+
 Configuring git shortuts
 $ git config --global alias.co checkout
 $ git config --global alias.br branch
