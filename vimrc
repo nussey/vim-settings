@@ -27,6 +27,7 @@ set hlsearch
 " Press Space to turn off highlighting and clear any message already
 " displayed.
 :nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
+:nnoremap } ]}
 
 " Use case insensitive serach, except when using capital letters
 set ignorecase
@@ -62,7 +63,6 @@ Plugin 'dgryski/vim-godef'
 
 filetype plugin indent on     " required
 " Finish Vundle Stuff
-
 " Set the working path of cntlp to be the directory in which vim was opened
 let g:ctrlp_working_path_mode = 'ra'
 " Allow for the cycling through of previous deletes when pasting
