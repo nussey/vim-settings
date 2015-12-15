@@ -1,0 +1,71 @@
+**Setting up the Alex Nussey Dev Enviornment**
+
+TABLE OF CONTENTS:
+A) ITERM
+
+------ITERM(A)------
+
+1) Install ITerm. This is an alternative shell client. It is essentially just the Terminal utitlity that comes prepackeaged with OSX, but more asthetically pleasing and with some additional functionality. The shell that is accessed is the same however.
+
+www.iTerm2.com
+
+2) Go to Preferences -> Profiles -> Colors -> Load Presets -> Import and navigate to "Solarized Dark.itermcolors". 
+
+3) Select Load Presets again and choose Solarized Dark from the drop down.
+
+------SUBLIME TEXT(B)------
+1) Install Sublime Text 2. This is the best text editor in the whole world.
+
+http://www.sublimetext.com/2
+
+2) Run the application once to generate the dependent directories
+
+3) From the menu bar, select Sublime Text 2 -> Preferences -> Color Scheme -> Solarized (Dark)
+
+3) Copy over the configuration files form the folder Sublime Settings to "~/Library/Application Support/Sublime Text 2/Packages/User", overwriting the files that are already there
+
+4) Restart Sublime Text for changes to take full effect
+
+5) In order to allow Sublime Text to be opened form the command line, create a sym link in the bin directory. In order for this to work, Sublime needs to be installed in the Applications directory and your ~/bin directory needs to exist.
+
+Execute this command from a fresh terminal session:
+ln -s "/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl" ~/bin/subl
+
+6) Next, edit the file "~/.bash_profile" (create it if it does not exist) and add the line
+
+export PATH=$PATH:~/bin
+
+7) Save the file, restart the command line, and now executing "subl" should open sublime text
+
+------ZSHELL(C)------
+
+1) Run the auto installer for oh-my-zsh (an open source zshell management tool). You will be prompted for the admin password along the way
+
+curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
+
+2) Restart the command line. You are now running zshell
+
+3) Install the Melo-Powerline.otf font in the ZSH directory
+
+4) Copy the agnoster.zsh-theme file from the ZSH directory into the "~/.oh-my-zsh/themes" directory. If a conflicting file already exists, name the old file agnoster.zsh-theme.old and move the new one into place.
+
+5) Modify the file "~/.zshrc", changing the ZSH_THEME setting to:
+
+ZSH_THEME="agnoster"
+
+6) Restart the shell session and iTerm. The prompt should now look really nice
+
+
+------VIM(D)------
+
+1) Install Vundle (vim plugin manager) so that we can install packages (bundles). Clone the git repo by calling:
+
+git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+
+2) Copy the file .vimrc from the vim directory into the home directory
+
+3) Launch vim (call vim from command line). An error about being unable to find the color scheme solarized will appear. Just ignore this for now and hit enter to skip it.
+
+4) Type :BundleInstall and hit enter to run the Vundle bundle installer. This will download and install several useful packages such as Nerd Tree and the soloarized color scheme. Now type :q and hit enter twice to exit vim
+
+5) Reload vim and you should recieve no error and the colors should be different!

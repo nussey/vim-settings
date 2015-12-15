@@ -1,8 +1,5 @@
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
-# export GOPATH="$HOME/Developer/go"
-export GOPATH="$HOME/FullStory/mn/projects/fullstory/go"
-export FS_HOME="$HOME/FullStory/mn/projects/fullstory"
 export EDITOR=vim
 
 #Make it so that the numberpad enter key works in iTerm with Z Shell
@@ -57,11 +54,7 @@ plugins=(git)
 
 # User configuration
 
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/Users/Alex/bin:/usr/local/go/bin:$HOME/Developer/go/bin:$HOME/Fullstory/mn/projects/fullstory/go/bin"
-export PATH=$PATH:"$HOME/Developer/google-cloud-sdk/bin"
-export PATH=$PATH:"$HOME/Developer/arcanist/bin"
-export PATH="$HOME/Developer/go_appengine":$PATH
-# export MANPATH="/usr/local/man:$MANPATH"
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin"
 
 source $ZSH/oh-my-zsh.sh
 
@@ -90,6 +83,3 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias jsc="/System/Library/Frameworks/JavaScriptCore.framework/Versions/Current/Resources/jsc"
-alias fsdir="~/Fullstory/mn/projects/fullstory"
-alias gocode="~/Fullstory/mn/projects/fullstory/go/src/fs"
-alias services="NO_FWATCH=yes ./services.py --autoupdate start"

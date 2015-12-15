@@ -53,23 +53,11 @@ Bundle 'gmarik/vundle'
 Bundle 'scrooloose/nerdtree'
 Bundle 'ctrlp.vim'
 Bundle 'altercation/vim-colors-solarized'
-Bundle 'tpope/vim-haml'
-
-Plugin 'leafgarland/typescript-vim'
-Plugin 'fatih/vim-go'
-Plugin 'nsf/gocode', {'rtp': 'vim/'}
-Plugin 'vim-scripts/YankRing.vim'
-Plugin 'dgryski/vim-godef'
 
 filetype plugin indent on     " required
 " Finish Vundle Stuff
 " Set the working path of cntlp to be the directory in which vim was opened
 let g:ctrlp_working_path_mode = 'ra'
-" Allow for the cycling through of previous deletes when pasting
-let g:yankring_replace_n_pkey = '<C-y>'
-let g:yankring_replace_n_nkey = '<C-T>'
-" Do not save single characters to the yank ring
-let g:yankring_min_element_length = 2 
 
 " Settings for godef: Open definitions in a vertical split and if the
 " definition is in the same file, then just move the cursor instad of 
