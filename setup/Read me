@@ -31,6 +31,8 @@ http://www.sublimetext.com/2
 Execute this command from a fresh terminal session:
 ln -s "/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl" ~/bin/subl
 
+You may need to add $HOME/bin to your path in order for this to work
+
 6) Next, edit the file "~/.bash_profile" (create it if it does not exist) and add the line
 
 export PATH=$PATH:~/bin
