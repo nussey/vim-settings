@@ -32,6 +32,7 @@ Terminal tricks
 Vim
 <C-n> to autocomplete
 <C-w>T move window into a new tab
+zz Scroll so that cursor is in the middle of the screen
 
 Configuring git shortuts
 $ git config --global alias.co checkout
@@ -39,7 +40,14 @@ $ git config --global alias.br branch
 $ git config --global alias.ci commit
 $ git config --global alias.st status
 
+git add --patch
+git revert --patch
+
 Super useful commands
 head and tail show the begining and end of files respectively
 -Add a -f flag to follow changes
 -If we <C-L> afterwords it will clear the screen showing us just new changes without any bash prompts
+
+
+for cpu in 1 2; do (while true; do true; done) & done
+will peg cores

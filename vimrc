@@ -13,10 +13,15 @@ syntax enable
 
 " Make it so that I can use jj to exit insert mode instead of <ESC>
 :imap jj <Esc> 
+" Also going to give jk a try, should be even faster 
+:imap jk <Esc>
 " Change the active buffer after a split is performed
 :set splitright
 " Enable line numbers
 :set nu
+
+" Format JSON
+map <Leader>j :%!python -m json.tool<CR>
 
 " Better command-line completion
 set wildmenu
@@ -27,7 +32,6 @@ set hlsearch
 " Press Space to turn off highlighting and clear any message already
 " displayed.
 :nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
-:nnoremap } ]}
 
 " Use case insensitive serach, except when using capital letters
 set ignorecase
@@ -50,35 +54,40 @@ call vundle#rc()
 " let Vundle manage Vundle, required
 Bundle 'gmarik/vundle'
 
-Bundle 'scrooloose/nerdtree'
-Bundle 'ctrlp.vim'
-Bundle 'altercation/vim-colors-solarized'
+Plugin 'scrooloose/nerdtree'
+Plugin 'ctrlp.vim'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'fatih/vim-go'
 
 filetype plugin indent on     " required
 " Finish Vundle Stuff
 " Set the working path of cntlp to be the directory in which vim was opened
 let g:ctrlp_working_path_mode = 'ra'
+" Set it up so that it will look for a file called root.map to use as the
+" starting location
+let g:ctrlp_root_markers = ['root.map']
 
 " Settings for godef: Open definitions in a vertical split and if the
 " definition is in the same file, then just move the cursor instad of 
 " actually opening a new split
 let g:godef_split=3
 let g:godef_same_file_in_same_window=1
+au FileType go nmap ds <Plug>(go-def-split)
+au FileType go nmap dv <Plug>(go-def-vertical)
 
+" Don't show the type information when using symantic autocomplete
+" Without this, hitting tab to fill a completion opens a 2 line scratch file
+" at the top of the window
+set completeopt-=preview
 
 " Map nerd tree to be Control-n
 map <C-n> :NERDTreeToggle<CR>
 
-" Map the next tab key
-map <C-f> :tabn<CR>
-nnoremap <C-r> :tabp<CR>
-
-" Make easier window navigation
-nnoremap <C-h> <C-w>h
-nnoremap <C-j> <C-w>j
-nnoremap <C-k> <C-w>k
-nnoremap <C-l> <C-w>l
-
 " Color theme settings
 set background=dark
 color solarized
+
+" Make it so that the background will be transparent in iTerm2
+hi Normal guibg=NONE ctermbg=NONE
