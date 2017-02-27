@@ -116,3 +116,10 @@ alias fsdir="cd $FS_HOME"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias jsc="/System/Library/Frameworks/JavaScriptCore.framework/Versions/Current/Resources/jsc"
 
+alias matlab="/Applications/MATLAB_R2014a.app/bin/matlab -nodisplay -nosplash"
+
+# The next line updates PATH for the Google Cloud SDK.
+source '/Users/alex/Developer/google-cloud-sdk/path.zsh.inc'
+
+# The next line enables shell command completion for gcloud.
+source '/Users/alex/Developer/google-cloud-sdk/completion.zsh.inc'
