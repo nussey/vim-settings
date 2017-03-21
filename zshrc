@@ -75,6 +75,7 @@ export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin"
 source $ZSH/oh-my-zsh.sh
 
 #FULLSTORY STUFF
+export PATH="$PATH:/Users/alex/Developer/protoc-3.2.0-osx-x86_64/bin"
 export PATH="$PATH:/usr/local/go/bin"
 export PATH="$PATH:/Users/alex/fs-src/mn/projects/fullstory/go/bin"
 export PATH="$PATH:/Users/alex/.cargo/bin"
