@@ -33,6 +33,7 @@ Vim
 <C-n> to autocomplete
 <C-w>T move window into a new tab
 zz Scroll so that cursor is in the middle of the screen
+f and t then a character jump to the first occurance of a character in a line
 
 Configuring git shortuts
 $ git config --global alias.co checkout

@@ -80,7 +80,7 @@ export PATH="$PATH:/usr/local/go/bin"
 export PATH="$PATH:/Users/alex/fs-src/mn/projects/fullstory/go/bin"
 export PATH="$PATH:/Users/alex/.cargo/bin"
 export FS_HOME="$HOME/fs-src/mn/projects/fullstory"
-export GOPATH="$FS_HOME/go"
+export GOPATH="/Users/alex/Developer/go:$FS_HOME/go"
 export FS_LOCAL=true
 ulimit -n 10000
 # The next line updates PATH for the Google Cloud SDK.
@@ -90,6 +90,7 @@ source '/Users/alex/Developer/google-cloud-sdk/completion.zsh.inc'
 export PATH="$FS_HOME/backend/install/go_appengine_1.9.46:$PATH"
 
 alias fsdir="cd $FS_HOME"
+alias fsgo="cd $FS_HOME/go/src/fs"
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8

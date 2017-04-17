@@ -11,6 +11,14 @@ set tabstop=2
 " Enable syntax based highlighting
 syntax enable
 
+" Allow text to go out the side of the window
+set nowrap
+" Allow side scrolling character by chracter rather than half windows
+set sidescroll=1
+
+" Set the leader key to comma
+:let mapleader = ","
+
 " Make it so that I can use jj to exit insert mode instead of <ESC>
 :imap jj <Esc> 
 " Also going to give jk a try, should be even faster 
@@ -20,8 +28,30 @@ syntax enable
 " Enable line numbers
 :set nu
 
+" Fix yanking so that the cursor doesn't move when you do
+" otherwise know as - make yank less jank
+vnoremap <expr>y "my\"" . v:register . "y`y""`"
+
 " Format JSON
 map <Leader>j :%!python -m json.tool<CR>
+" Set <Leader>t to move to the next tab
+map <Leader>t :tabn<CR>
+" install and build go code
+map <Leader>gi :!clear<CR>:w<CR>:GoInstall<CR>
+map <Leader>gb :!clear<CR>:w<CR>:GoBuild<CR>
+
+" A generalized function to use to toggle two commands with single repeated
+" keystroke
+function! ToggleMovement(firstOp, thenOp)
+  let pos = getpos('.')
+  execute "normal! " . a:firstOp
+  if pos == getpos('.')
+    execute "normal! " . a:thenOp
+  endif
+endfunction
+
+" make it so that pressing 0 does ^ and again does 0
+nnoremap <silent> 0 :call ToggleMovement('^', '0')<CR>
 
 " Better command-line completion
 set wildmenu
@@ -55,6 +85,8 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'jiangmiao/auto-pairs'
 Plugin 'ctrlp.vim'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'christoomey/vim-tmux-navigator'
@@ -68,6 +100,14 @@ let g:ctrlp_working_path_mode = 'ra'
 " Set it up so that it will look for a file called root.map to use as the
 " starting location
 let g:ctrlp_root_markers = ['root.map']
+
+" Make YCM less naggy
+set shortmess+=c
+
+" Some CtrlP settings
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
+set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe  " Windows
+let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 
 " Settings for godef: Open definitions in a vertical split and if the
 " definition is in the same file, then just move the cursor instad of 
