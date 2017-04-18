@@ -37,6 +37,7 @@ map <Leader>j :%!python -m json.tool<CR>
 " Set <Leader>t to move to the next tab
 map <Leader>t :tabn<CR>
 " install and build go code
+" This will break if vim go is not installed
 map <Leader>gi :!clear<CR>:w<CR>:GoInstall<CR>
 map <Leader>gb :!clear<CR>:w<CR>:GoBuild<CR>
 
@@ -90,19 +91,16 @@ Plugin 'jiangmiao/auto-pairs'
 Plugin 'ctrlp.vim'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'christoomey/vim-tmux-navigator'
-Plugin 'Valloric/YouCompleteMe'
 Plugin 'fatih/vim-go'
 
 filetype plugin indent on     " required
 " Finish Vundle Stuff
+
 " Set the working path of cntlp to be the directory in which vim was opened
 let g:ctrlp_working_path_mode = 'ra'
 " Set it up so that it will look for a file called root.map to use as the
 " starting location
 let g:ctrlp_root_markers = ['root.map']
-
-" Make YCM less naggy
-set shortmess+=c
 
 " Some CtrlP settings
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
@@ -116,11 +114,6 @@ let g:godef_split=3
 let g:godef_same_file_in_same_window=1
 au FileType go nmap ds <Plug>(go-def-split)
 au FileType go nmap dv <Plug>(go-def-vertical)
-
-" Don't show the type information when using symantic autocomplete
-" Without this, hitting tab to fill a completion opens a 2 line scratch file
-" at the top of the window
-set completeopt-=preview
 
 " Map nerd tree to be Control-n
 map <C-n> :NERDTreeToggle<CR>
