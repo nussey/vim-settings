@@ -19,6 +19,13 @@ set sidescroll=1
 " Set the leader key to comma
 :let mapleader = ","
 
+" Save with ,w
+map <Leader>w :w<CR>
+" Save and exit insert mode with ,,w
+imap <Leader><Leader>w <Esc>:w<CR>
+" Save and close the file with ZZ, even in insert mode
+imap ZZ <Esc>:wq<CR>
+
 " Make it so that I can use jj to exit insert mode instead of <ESC>
 :imap jj <Esc> 
 " Also going to give jk a try, should be even faster 
