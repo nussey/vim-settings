@@ -28,12 +28,30 @@ Terminal tricks
 <C-u>: delete everything before this
 <C-r>: search command history. Begin typing to search, hit <C-r> again to cycle through
 <C-L>: Clear the terminal
+<Alt-f>: Jump forward a word
+<Alt-b>: Jump backwords a word
+<Alt-d>: Delete the word
 
 Vim
 <C-n> to autocomplete
 <C-w>T move window into a new tab
-zz Scroll so that cursor is in the middle of the screen
-f and t then a character jump to the first occurance of a character in a line
+z* position screen: <CR> is top, - is bottom, . is center
+f and t then a character jump to the first occurance of a character in a line. go to the next occurance with ;
+u and U to convert highlighted text to lower or upper case respectively. ~ flips case under highlight (F and T are backwards)
+a does the same as i, but after instead of before character
+e does the same was w, but to the end of the current word instead of the start of the next
+m(a-z) is how you set marks. Example: ma sets the a mark. Then '(a-z) takes you to the start of the line or `(a-z) takes you to the exact place
+s deletes character and drops in to insert mode
+C is change until end of line
+D is delete until end of line
+S deletes the line and enters insert mode
+U restores line to how it was when cursor arrived
+V enters selection mode on a line by line basis
+J joins the line below to the end of the current one
+
+e, w, and b let other chracters denote words. E, W, and B must have whitespace delimination
+
+https://hea-www.harvard.edu/~fine/Tech/vi.html
 
 Configuring git shortuts
 $ git config --global alias.co checkout
