@@ -9,7 +9,7 @@ Steps for getting things set up:
 2) Modify the paths in the install script so that they point at the folder this doc is in 'vim-settings' and to your home folder
 3) Run the script, it will create symlinks, which are functionally identical
 4) Modify .vimrc so that the path reflects the path of your home directory, then clone down the vundle repo
-4a) git clone https://github.com/gmarik/vundle.git /HOME/.vim/bundle/vundle
+4a) git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 5) Open vim, ignore the warnings, and run :BundleInstall
 
 
