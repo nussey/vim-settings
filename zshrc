@@ -4,7 +4,7 @@ export ZSH=$HOME/.oh-my-zsh
 export EDITOR=vim
 
 # Set an initial PATH
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:$PATH"
+export PATH="/usr/local/bin:$HOME/.local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/homebrew/bin:/opt/X11/bin:$PATH"
 
 # Include configuration that is local to this machine
 # At some point, figure out how to make this a relative path
@@ -46,7 +46,7 @@ POWERLEVEL9K_TIME_FORMAT="%D{%H:%M}"
 # right hand side of the status line
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status time)
 # Show the user, host, and PWD on the left side of the status line
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir)
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir vcs)
 # Show 12 hour time instead of 24 hour time
 POWERLEVEL9K_TIME_12HR=true
 # Set the background color of the status line
