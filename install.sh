@@ -14,3 +14,10 @@ for file in $files; do
 	echo "Creating symlink to $file in home directory"
 	ln -s $dir/$file $targetDir/.$file
 done
+
+# Claude Code settings
+echo "Setting up Claude Code symlinks..."
+mkdir -p ~/.claude
+ln -sf $dir/claude/skills ~/.claude/skills
+ln -sf $dir/claude/settings.json ~/.claude/settings.json
+ln -sf $dir/claude/keybindings.json ~/.claude/keybindings.json

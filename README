@@ -16,6 +16,20 @@ Steps for getting things set up:
 If you make changes: commit them, then
 git push origin master
 
+------CLAUDE CODE SETTINGS--------
+
+The claude/ directory contains Claude Code configuration:
+- claude/skills/ - custom slash commands (/commit, /pdf)
+- claude/settings.json - global settings (hooks, plugins)
+- claude/keybindings.json - custom keybindings
+
+The install script symlinks these into ~/.claude/. On a new machine:
+1) Install Claude Code (npm install -g @anthropic-ai/claude-code)
+2) Run claude once so it creates ~/.claude/
+3) Run install.sh - it will symlink the Claude config files
+
+If install.sh was already run before Claude was installed, just re-run it.
+
 
 I used this to get the idea:
 http://blog.smalleycreative.com/tutorials/using-git-and-github-to-manage-your-dotfiles/
